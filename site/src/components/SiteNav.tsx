@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { site } from "../content/site";
 
@@ -7,12 +8,19 @@ const linkClass = ({ isActive }: { isActive: boolean }) =>
     : "text-slate-400 hover:text-cyan-300 transition-colors";
 
 export function SiteNav() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const mobileLinkClass =
+    "block rounded-lg border border-transparent px-3 py-2 font-headline text-sm tracking-tight text-slate-200 transition-colors hover:border-cyan-500/20 hover:bg-cyan-500/10 hover:text-cyan-300";
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-cyan-500/15 bg-slate-950/60 shadow-[0_0_20px_rgba(0,240,255,0.05)] backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-screen-2xl items-center justify-between px-8 py-4">
+      <nav className="mx-auto max-w-screen-2xl px-4 py-3 md:px-8 md:py-4">
+        <div className="flex items-center justify-between">
         <Link
           to="/"
           className="font-headline text-2xl font-bold tracking-tighter text-cyan-400"
+          onClick={() => setMobileOpen(false)}
         >
           {site.navBrand}
         </Link>
@@ -31,6 +39,16 @@ export function SiteNav() {
           </NavLink>
         </div>
         <div className="flex items-center gap-2 md:gap-4">
+          <button
+            type="button"
+            className="rounded-lg p-2 text-cyan-400 transition-all duration-300 hover:bg-cyan-500/10 hover:text-cyan-300 active:scale-95 md:hidden"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            <span className="material-symbols-outlined">
+              {mobileOpen ? "close" : "menu"}
+            </span>
+          </button>
           <div className="relative">
             <a
               href={site.resume.publicPath}
@@ -59,6 +77,43 @@ export function SiteNav() {
             </a>
           </div>
         </div>
+        </div>
+
+        {mobileOpen ? (
+          <div className="mt-3 rounded-stitch-lg border border-cyan-500/15 bg-slate-950/95 p-3 md:hidden">
+            <div className="grid grid-cols-2 gap-2">
+              <NavLink
+                to="/"
+                end
+                className={mobileLinkClass}
+                onClick={() => setMobileOpen(false)}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/projects"
+                className={mobileLinkClass}
+                onClick={() => setMobileOpen(false)}
+              >
+                Projects
+              </NavLink>
+              <NavLink
+                to="/publications"
+                className={mobileLinkClass}
+                onClick={() => setMobileOpen(false)}
+              >
+                Publications
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={mobileLinkClass}
+                onClick={() => setMobileOpen(false)}
+              >
+                About Me
+              </NavLink>
+            </div>
+          </div>
+        ) : null}
       </nav>
     </header>
   );
