@@ -297,7 +297,7 @@ export const site = {
         slug: "ai-flutter",
         title: "Pixloo.AI: ai_flutter",
         description:
-          "This is Pixloo.AI / AI Creator, a Flutter app that lets users generate images from text prompts and create animations from images with a modern, mobile-first UI. It includes login/onboarding plus billing & usage tracking (credits, purchase history) and integrates services like Supabase (auth/backend) with optional in-app purchases and ads.",
+          "This is Pixloo.AI / AI Creator, a Flutter app that lets users generate images from text prompts and create animations from images with a modern, mobile-first UI. I used top image AI models to power the generation quality and overall workflow. It includes login/onboarding plus billing & usage tracking (credits, purchase history) and integrates services like Supabase (auth/backend) with optional in-app purchases and ads.",
         category: "featured",
         image: "/pixloo-thumb.png",
         imageAlt: "Pixloo.AI app icon",
