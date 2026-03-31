@@ -239,7 +239,7 @@ export function ProjectsPage() {
 
                   <div className="mt-4 grid grid-cols-1 gap-3">
                     <a
-                      href="https://www.apple.com/app-store/"
+                      href="https://apps.apple.com/us/app/pixloo-ai/id6759696920"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group relative overflow-hidden rounded-lg bg-primary px-4 py-4 text-left transition-all duration-300 hover:shadow-[0_0_18px_rgba(0,238,252,0.45)] active:scale-[0.99]"
@@ -282,7 +282,7 @@ export function ProjectsPage() {
                   </div>
 
                   <div className="mt-4 font-body text-xs text-on-surface-variant">
-                    Tip: I can swap the App Store button to your exact listing whenever it’s ready.
+                    Google Play will be linked here when the Android release is live.
                   </div>
                 </div>
               </div>
