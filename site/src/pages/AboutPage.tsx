@@ -46,13 +46,13 @@ export function AboutPage() {
                   className={`overflow-hidden rounded-stitch-xl border bg-surface-container-highest transition-all duration-500 hover:translate-y-[-3px] ${tone}`}
                 >
                   <div
-                    className={`grid grid-cols-1 md:grid-cols-2 ${idx % 2 === 0 ? "" : "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"}`}
+                    className={`grid grid-cols-2 ${idx % 2 === 0 ? "" : "[&>*:first-child]:order-2 [&>*:last-child]:order-1"}`}
                   >
-                    <div className="relative aspect-[16/11] w-full bg-surface-container-low">
+                    <div className="relative aspect-[3/4] w-full bg-surface-container-low">
                       <img
                         src={it.imageSrc}
                         alt={it.imageAlt}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain p-6 md:p-8"
                       />
                       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(closest-side,rgba(14,238,252,0.10),transparent_70%)] opacity-70" />
                     </div>
