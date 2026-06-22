@@ -167,6 +167,17 @@ export const site = {
       metaLine: "From my resume",
       items: [
         {
+          id: "handshake-ai-contract",
+          company: "Handshake AI",
+          role: "AI Engineer (Contract)",
+          location: "Remote",
+          range: "January 2026 - Present",
+          bullets: [
+            "Contributed to frontier AI model improvement through software engineering prompt evaluation, response validation, and technical feedback workflows.",
+            "Analyzed AI-generated outputs for accuracy, reasoning quality, and adherence to technical requirements across coding and problem-solving tasks.",
+          ],
+        },
+        {
           id: "highstreet-oracle-sfp",
           company: "Highstreet IT Solutions",
           role: "Software Developer (Oracle Student Financial Planning)",
@@ -293,6 +304,27 @@ export const site = {
       "Representative engineering work that shows how I design, build, and deliver reliable systems end-to-end.",
     statusLine: "Status: Open to full-time roles",
     items: [
+      {
+        slug: "dreamcatcher",
+        title: "Dreamcatcher",
+        description:
+          "Currently in development — a full-stack mobile application that uses AI to generate dream interpretations and personalized visual dream experiences.",
+        category: "featured",
+        image: "/dreamcatcher-thumb.png",
+        imageAlt: "Dreamcatcher app thumbnail",
+        tags: ["AI", "Mobile", "Full-Stack", "In Progress"],
+        icon: "bedtime",
+        iconTone: "secondary",
+        demoUrl: "https://github.com/brianbales99/Dreamcatcher",
+        demoLabel: "Open Repo",
+        extraButtonLabel: "",
+        extraButtonUrl: "",
+        extraButtonTarget: "_blank",
+        previewImage: "",
+        previewImageAlt: "",
+        sourceUrl: "https://github.com/brianbales99/Dreamcatcher",
+        sourceLabel: "Source",
+      },
       {
         slug: "ai-flutter",
         title: "Pixloo.AI: ai_flutter",
