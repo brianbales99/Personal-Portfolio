@@ -310,8 +310,8 @@ export const site = {
         description:
           "Currently in development — a full-stack mobile application that uses AI to generate dream interpretations and personalized visual dream experiences.",
         category: "featured",
-        image: "/dreamcatcher-thumb.png",
-        imageAlt: "Dreamcatcher app thumbnail",
+        image: "/dreamcatcher-thumb.svg",
+        imageAlt: "Dreamcatcher sleeping sheep logo",
         tags: ["AI", "Mobile", "Full-Stack", "In Progress"],
         icon: "bedtime",
         iconTone: "secondary",
