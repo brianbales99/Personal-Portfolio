@@ -155,12 +155,20 @@ export function PublicationsPage() {
                   Email
                 </a>
                 <a
-                  href={site.resume.publicPath}
+                  href={site.resume.onePage.publicPath}
                   download
                   className="font-label inline-flex items-center justify-center gap-2 rounded-stitch-lg bg-primary px-8 py-4 text-sm font-bold uppercase tracking-wider text-on-primary transition-all hover:shadow-[0_0_30px_rgba(143,245,255,0.4)]"
                 >
                   <span className="material-symbols-outlined">download</span>
-                  {site.resume.buttonLabel}
+                  {site.resume.onePage.buttonLabel}
+                </a>
+                <a
+                  href={site.resume.twoPage.publicPath}
+                  download
+                  className="font-label inline-flex items-center justify-center gap-2 rounded-stitch-lg border border-primary/40 px-8 py-4 text-sm font-bold uppercase tracking-wider text-primary transition-all hover:border-primary hover:shadow-[0_0_30px_rgba(143,245,255,0.25)]"
+                >
+                  <span className="material-symbols-outlined">download</span>
+                  {site.resume.twoPage.buttonLabel}
                 </a>
               </div>
             </div>

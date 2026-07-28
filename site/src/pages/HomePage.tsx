@@ -35,11 +35,21 @@ export function HomePage() {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
-                  href={resume.publicPath}
+                  href={resume.onePage.publicPath}
                   download
                   className="group font-headline flex items-center gap-2 rounded-stitch-lg bg-primary px-8 py-4 font-bold uppercase tracking-wider text-on-primary transition-all duration-300 hover:shadow-[0_0_20px_rgba(143,245,255,0.4)]"
                 >
-                  {resume.buttonLabel}
+                  {resume.onePage.buttonLabel}
+                  <span className="material-symbols-outlined transition-transform group-hover:translate-y-1">
+                    download
+                  </span>
+                </a>
+                <a
+                  href={resume.twoPage.publicPath}
+                  download
+                  className="group font-headline flex items-center gap-2 rounded-stitch-lg border border-primary/40 bg-surface-container-highest px-8 py-4 font-bold uppercase tracking-wider text-primary transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(143,245,255,0.25)]"
+                >
+                  {resume.twoPage.buttonLabel}
                   <span className="material-symbols-outlined transition-transform group-hover:translate-y-1">
                     download
                   </span>
@@ -81,6 +91,20 @@ export function HomePage() {
         </section>
         <section className="bg-surface-container-low py-24">
           <div className="mx-auto max-w-7xl px-6 md:px-12">
+            <div>
+              <div className="mb-10 space-y-2">
+                <span className="font-label text-xs uppercase tracking-widest text-tertiary">
+                  {h.summarySection.eyebrow}
+                </span>
+                <h3 className="font-headline text-3xl font-bold md:text-4xl">
+                  {h.summarySection.title}
+                </h3>
+              </div>
+              <p className="font-body max-w-4xl text-lg leading-relaxed text-on-surface-variant">
+                {h.summarySection.body}
+              </p>
+            </div>
+
             <div className="mt-20">
               <div className="mb-10 space-y-2">
                 <span className="font-label text-xs uppercase tracking-widest text-tertiary">

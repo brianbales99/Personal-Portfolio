@@ -1,6 +1,6 @@
 /**
  * Portfolio copy and links — edit this file to update the whole site.
- * Add your resume PDF as: `site/public/resume.pdf`.
+ * Resume PDFs live in `site/public/`.
  */
 
 export const site = {
@@ -12,8 +12,17 @@ export const site = {
   documentTitle: "Brian Bales | Software Engineer",
 
   resume: {
-    publicPath: "/resume.pdf",
+    /** Default / nav shortcut — one-page version. */
+    publicPath: "/Brian_Bales_2026_Resume_1page.pdf",
     buttonLabel: "Download resume",
+    onePage: {
+      publicPath: "/Brian_Bales_2026_Resume_1page.pdf",
+      buttonLabel: "1-page resume",
+    },
+    twoPage: {
+      publicPath: "/Brian_Bales_2026_Resume_2page.pdf",
+      buttonLabel: "2-page resume",
+    },
   },
 
   links: {
@@ -31,9 +40,15 @@ export const site = {
       line2: "software systems.",
     },
     intro:
-      "Software Engineer in Los Angeles, CA focused on enterprise automation, production frontends, and measurable performance. I ship maintainable systems end-to-end (from data and APIs to polished user experiences).",
+      "Software Engineer in Los Angeles, CA focused on internal production tools, SaaS integrations, workflow automation, and AI-powered applications.",
     portraitSrc: "/portrait.png",
     portraitAlt: "Brian Bales — professional photo",
+
+    summarySection: {
+      eyebrow: "Professional summary",
+      title: "SUMMARY",
+      body: "Software Engineer with experience building internal production tools, full-stack SaaS applications, and AI-powered workflows across entertainment and enterprise environments. Skilled in React, JavaScript/TypeScript, Python, Node.js, SQL, REST APIs, and cloud platforms. Proven ability to partner with business stakeholders, translate operational needs into technical solutions, troubleshoot integrations, and rapidly learn new platforms.",
+    },
 
     techSection: {
       eyebrow: "Core skills",
@@ -72,10 +87,10 @@ export const site = {
         },
         {
           n: "04",
-          icon: "developer_mode_tv",
-          title: "Data & ML",
+          icon: "auto_awesome",
+          title: "AI Tools & Workflows",
           description:
-            "Python, TensorFlow, and feature selection pipelines (GA-SFS).",
+            "Cursor, MCP, agents, custom Skills, and prompt engineering for AI-assisted delivery.",
           border: "border-primary",
           iconClass: "text-primary",
           hoverClass: "group-hover:text-primary",
@@ -85,13 +100,13 @@ export const site = {
         "TypeScript",
         "React",
         "Python",
-        "Groovy",
+        "Node.js",
         "SQL",
+        "Cursor",
+        "MCP",
         "Salesforce",
-        "Apex",
-        "TensorFlow",
-        "Scikit-learn",
-        "Jira",
+        "Supabase",
+        "Flutter",
       ],
       skills: [
         {
@@ -99,64 +114,92 @@ export const site = {
           icon: "code",
           tone: "primary",
           items: [
+            "JavaScript",
+            "TypeScript",
             "Python",
+            "SQL",
+            "Groovy",
             "Java",
             "C++",
-            "JavaScript",
-            "Groovy",
-            "SQL",
             "HTML/CSS",
           ],
         },
         {
-          title: "Machine Learning & Data",
-          icon: "analytics",
-          tone: "secondary",
-          items: [
-            "Scikit-learn",
-            "NumPy",
-            "Pandas",
-            "Matplotlib",
-            "TensorFlow",
-            "Google Colab",
-          ],
-        },
-        {
-          title: "Frameworks & Frontend",
+          title: "Frontend & Mobile",
           icon: "developer_mode_tv",
           tone: "tertiary",
           items: [
             "React",
             "Angular",
+            "Next.js",
             "Vue.js",
             "Flutter",
+            "Lightning Web Components",
             "Material UI",
-            "Lovable",
-            "RESTful API",
           ],
         },
         {
-          title: "Tools & Platforms",
-          icon: "build",
+          title: "Backend & Integration",
+          icon: "hub",
+          tone: "secondary",
+          items: [
+            "Node.js",
+            "Express",
+            "REST APIs",
+            "Supabase",
+            "Firebase/Firestore",
+            "PostgreSQL",
+            "Authentication",
+            "API integrations",
+          ],
+        },
+        {
+          title: "AI & Developer Tools",
+          icon: "auto_awesome",
           tone: "primary",
           items: [
-            "Git",
-            "GitHub",
-            "VS Code",
             "Cursor",
-            "Google Studio",
-            "Salesforce",
-            "Firestore",
-            "Jira",
-            "Figma",
-            "Copilot",
+            "Claude",
+            "GitHub Copilot",
+            "Google Stitch",
+            "Model Context Protocol (MCP)",
+            "AI agents",
+            "Custom rules & Skills",
+            "Prompt engineering",
+            "Replicate",
+            "Fal.AI",
           ],
         },
         {
-          title: "Systems",
-          icon: "devices",
+          title: "Platforms & Data",
+          icon: "build",
           tone: "secondary",
-          items: ["macOS", "Windows", "Linux"],
+          items: [
+            "Salesforce",
+            "Vercel",
+            "Fly.io",
+            "Git/GitHub",
+            "Jira",
+            "Figma",
+            "scikit-learn",
+            "TensorFlow",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+          ],
+        },
+        {
+          title: "AI-Assisted Workflows",
+          icon: "account_tree",
+          tone: "tertiary",
+          items: [
+            "Cursor + MCP integrations",
+            "Project-specific rules",
+            "Reusable Skills & agents",
+            "Stitch design-to-code handoffs",
+            "Manual architecture validation",
+            "Security & API review",
+          ],
         },
       ],
     },
@@ -173,44 +216,48 @@ export const site = {
           location: "Remote",
           range: "January 2026 - Present",
           bullets: [
-            "Contributed to frontier AI model improvement through software engineering prompt evaluation, response validation, and technical feedback workflows.",
-            "Analyzed AI-generated outputs for accuracy, reasoning quality, and adherence to technical requirements across coding and problem-solving tasks.",
+            "Evaluate frontier AI model outputs across coding and technical reasoning tasks, assessing accuracy, logic, instruction-following, completeness, and edge cases.",
+            "Create structured technical feedback and response-validation workflows that help improve model quality and reliability.",
+            "Apply software engineering judgment to identify faulty assumptions, implementation defects, and unsafe or unsupported conclusions in AI-generated responses.",
+          ],
+        },
+        {
+          id: "fox-ent-production-post",
+          company: "FOX Entertainment",
+          role: "Software Engineer",
+          location: "Los Angeles, CA",
+          range: "February 2025 - May 2025",
+          bullets: [
+            "Developed React-based internal applications supporting production workflows across shows, episodes, and deliveries; rapidly iterated UI/UX with stakeholders using AI-assisted development tools.",
+            "Built a full-stack integration connecting Linear task data to custom frontend interfaces, giving production teams clearer visibility into work status and operational progress.",
+            "Engineered scalable filtering and navigation components for large production datasets, reducing friction when locating operational content.",
+            "Partnered with production and technical teams to translate workflow pain points into practical features used by internal users.",
+          ],
+        },
+        {
+          id: "fox-corp-business-data",
+          company: "FOX Corporation",
+          role: "Software Developer",
+          location: "Los Angeles, CA",
+          range: "September 2024 - December 2024",
+          bullets: [
+            "Developed Salesforce Playbook tools for production scheduling and crew coordination using JavaScript, Lightning Web Components, Apex, and HTML/CSS.",
+            "Integrated crew availability, project workload, and scheduling data into a unified SaaS workflow to improve production coordination.",
+            "Collaborated with engineers, product managers, and business stakeholders in Agile environments to refine requirements, test changes, and deliver platform enhancements.",
+            "Quickly learned Salesforce platform development and applied web engineering fundamentals to custom interfaces, backend logic, and workflow automation.",
           ],
         },
         {
           id: "highstreet-oracle-sfp",
           company: "Highstreet IT Solutions",
-          role: "Software Developer (Oracle Student Financial Planning)",
+          role: "Software Developer",
           location: "Rockville, MD",
           range: "May 2021 - December 2022",
           bullets: [
-            "Configured and customized Oracle SFP to automate financial aid processes for 1,000+ students.",
-            "Partnered with financial aid staff and Agile teammates to translate requirements into system updates, improving accuracy and reducing QA issues.",
-            "Built and maintained workflow logic in Oracle SFP using Groovy and SQL to map school requirements into reliable system behavior.",
-          ],
-        },
-        {
-          id: "fox-corp-business-data",
-          company: "Fox Corporation",
-          role: "Software Developer (Business and Data Platforms)",
-          location: "Los Angeles, CA",
-          range: "September 2024 - December 2024",
-          bullets: [
-            "Developed a scheduling tool using JavaScript, Lightning Web Components, HTML/CSS, and Apex to streamline crew availability and reduce manual coordination.",
-            "Created data integrations inside Salesforce Playbook so producers could view real-time availability, workload, and project history.",
-            "Wrote and refined user stories in JIRA and regularly communicated progress to product managers, engineers, and entertainment stakeholders.",
-          ],
-        },
-        {
-          id: "fox-ent-production-post",
-          company: "Fox Entertainment",
-          role: "Software Engineer (Production & Post Technology)",
-          location: "Los Angeles, CA",
-          range: "February 2025 - May 2025",
-          bullets: [
-            "Built a React-based webpage using AI-assisted iteration to coordinate visual assets and align with production needs.",
-            "Implemented an in-app Linear feature by connecting Linear task data to a custom frontend UI, exposing real-time team progress inside Linear.",
-            "Engineered frontend filtering logic to dynamically control which production data appears on screen, improving navigation at scale.",
+            "Configured and customized Oracle Student Financial Planning services supporting financial aid workflows for 1,000+ university students.",
+            "Developed backend workflow logic using Groovy and SQL to automate eligibility checks, award processing, and financial aid operations.",
+            "Troubleshot data and system issues across interconnected workflows, improving process accuracy and reliability for administrators and students.",
+            "Partnered with financial aid stakeholders to translate policy and operational requirements into tested enterprise-system updates.",
           ],
         },
       ],
@@ -563,7 +610,7 @@ export const site = {
     contact: {
       title: "Hiring or questions?",
       body:
-        "Email is the fastest way to reach me at Brianbales99@gmail.com. You can also download my resume from the top bar or from this page.",
+        "Email is the fastest way to reach me at Brianbales99@gmail.com. You can also download my 1-page or 2-page resume from the home page.",
     },
   },
 } as const;
