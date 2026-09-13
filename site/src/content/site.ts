@@ -13,14 +13,14 @@ export const site = {
 
   resume: {
     /** Default / nav shortcut — one-page version. */
-    publicPath: "/Brian_Bales_2026_Resume_1page.pdf",
+    publicPath: "/Brian_Bales_2026_Resume.pdf",
     buttonLabel: "Download resume",
     onePage: {
-      publicPath: "/Brian_Bales_2026_Resume_1page.pdf",
+      publicPath: "/Brian_Bales_2026_Resume.pdf",
       buttonLabel: "1-page resume",
     },
     twoPage: {
-      publicPath: "/Brian_Bales_2026_Resume_2page.pdf",
+      publicPath: "/Brian_Bales_Resume_2026.pdf",
       buttonLabel: "2-page resume",
     },
   },
